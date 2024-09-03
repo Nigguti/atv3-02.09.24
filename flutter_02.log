@@ -1,0 +1,101 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+SocketException: SocketException: Connection attempt cancelled, host: localhost, port: 56301
+
+```
+#0      _NativeSocket.startConnect (dart:io-patch/socket_patch.dart:721:35)
+#1      _RawSocket.startConnect (dart:io-patch/socket_patch.dart:1920:26)
+#2      RawSocket.startConnect (dart:io-patch/socket_patch.dart:27:23)
+#3      Socket._startConnect (dart:io-patch/socket_patch.dart:2144:22)
+#4      Socket.startConnect (dart:io/socket.dart:825:21)
+#5      _ConnectionTarget.connect (dart:_http/http_impl.dart:2491:20)
+#6      _HttpClient._getConnection.connect (dart:_http/http_impl.dart:2930:12)
+#7      _HttpClient._getConnection (dart:_http/http_impl.dart:2935:12)
+#8      _HttpClient._openUrl (dart:_http/http_impl.dart:2790:12)
+#9      _HttpClient.getUrl (dart:_http/http_impl.dart:2632:48)
+#10     ChromeConnection.getUrl (package:webkit_inspection_protocol/webkit_inspection_protocol.dart:108:33)
+#11     ChromeConnection.getTabs (package:webkit_inspection_protocol/webkit_inspection_protocol.dart:53:26)
+#12     ChromeConnection.getTab (package:webkit_inspection_protocol/webkit_inspection_protocol.dart:90:31)
+#13     Chromium.close (package:flutter_tools/src/web/chrome.dart:512:38)
+#14     ChromiumDevice.stopApp (package:flutter_tools/src/web/web_device.dart:164:20)
+#15     FlutterDevice.exitApps (package:flutter_tools/src/resident_runner.dart:377:19)
+#16     ResidentWebRunner.exitApp (package:flutter_tools/src/isolated/resident_web_runner.dart:729:19)
+#17     ResidentRunner.exit (package:flutter_tools/src/resident_runner.dart:1312:11)
+<asynchronous suspension>
+#18     TerminalHandler._commonTerminalInputHandler (package:flutter_tools/src/resident_runner.dart:1777:9)
+<asynchronous suspension>
+#19     TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1836:7)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.24.1, on Microsoft Windows [versÆo
+    10.0.19045.3570], locale pt-BR)
+    [32m•[39m Flutter version 3.24.1 on channel stable at C:\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision 5874a72aa4 (13 days ago), 2024-08-20 16:46:00 -0500
+    [32m•[39m Engine revision c9b9d5780d
+    [32m•[39m Dart version 3.5.1
+    [32m•[39m DevTools version 2.37.2
+
+[32m[✓][39m Windows Version (Installed version of Windows is version 10 or higher)
+
+[33m[!][39m Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    [32m•[39m Android SDK at C:\Users\Unicesumar\AppData\Local\Android\sdk
+    [31m✗[39m cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    [31m✗[39m Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/to/windows-android-setup for more details.
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[33m[!][39m Visual Studio - develop Windows apps (Visual Studio Community 2019 16.11.27)
+    [32m•[39m Visual Studio at C:\Program Files (x86)\Microsoft Visual
+      Studio\2019\Community
+    [32m•[39m Visual Studio Community 2019 version 16.11.33801.447
+    [31m✗[39m Visual Studio is missing necessary components. Please re-run the Visual
+      Studio installer for the "Desktop development with C++" workload, and
+      include these components:
+        MSVC v142 - VS 2019 C++ x64/x86 build tools
+         - If there are multiple build tool versions available, install the
+         latest
+        C++ CMake tools for Windows
+        Windows 10 SDK
+
+[32m[✓][39m Android Studio (version 2022.2)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build 17.0.6+0-b2043.56-9586694)
+
+[32m[✓][39m VS Code (version 1.79.2)
+    [32m•[39m VS Code at C:\Users\Unicesumar\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.96.0
+
+[32m[✓][39m Connected device (3 available)
+    [32m•[39m Windows (desktop) • windows • windows-x64    • Microsoft Windows [versÆo
+      10.0.19045.3570]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript • Google Chrome
+      128.0.6613.114
+    [32m•[39m Edge (web)        • edge    • web-javascript • Microsoft Edge
+      126.0.2592.81
+
+[32m[✓][39m Network resources
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 2 categories.
+```
